@@ -2,14 +2,14 @@
 
 ## Purpose
 
-The bank catalog and bank app metadata are copied from the bundled upstream JavaScript reference so the Ruby gem keeps the same public identifiers and compatibility data.
+The bank catalog and bank app metadata are generated from the bundled source constants so the Ruby gem keeps a stable public identifier and compatibility surface.
 
 ## Source of Truth
 
-Upstream reference directory:
+Source constants directory:
 
 ```text
-references/vietnam-qr-pay-javascript/src/constants/
+references/source/constants/
 ```
 
 Ruby generated output:

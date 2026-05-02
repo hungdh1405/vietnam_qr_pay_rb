@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module VietnamQrPay
-  # A generated bank catalog entry mirrored from the upstream JavaScript data.
+  # A generated bank catalog entry mirrored from the bundled source data.
   Bank = Struct.new(
     :key,
     :code,

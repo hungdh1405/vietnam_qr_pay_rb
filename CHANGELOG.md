@@ -32,6 +32,6 @@ All notable changes to this project will be documented in this file.
 - VietQR payload parsing and generation.
 - VNPayQR payload parsing and generation.
 - Support for decoding related EMVCo-style provider payloads while preserving unknown provider data.
-- Bank and bank app catalogs ported from the upstream JavaScript reference.
+- Bank and bank app catalogs bundled with the gem source.
 - Test coverage based on the upstream reference fixtures and expected payloads.
 - RubyGems packaging metadata, release docs, and repository build/test tasks.

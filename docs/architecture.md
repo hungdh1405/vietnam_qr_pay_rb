@@ -2,10 +2,10 @@
 
 ## Overview
 
-`VietnamQrPay` is a small Ruby port of the upstream `vietnam-qr-pay` JavaScript library. The gem is intentionally split into two parts:
+`VietnamQrPay` is a small Ruby payment QR library. The gem is intentionally split into two parts:
 
 - Hand-written QR logic for parsing, building, and CRC validation
-- Generated catalog data copied from the upstream bank constants
+- Generated catalog data copied from the bundled source constants
 
 This split matters because the QR logic changes rarely, while the bank and app catalog can drift over time as the upstream reference is updated.
 
@@ -69,10 +69,10 @@ Other providers:
 
 The files under `lib/vietnam_qr_pay/catalog/` are generated from:
 
-- `references/vietnam-qr-pay-javascript/src/constants/bank-key.ts`
-- `references/vietnam-qr-pay-javascript/src/constants/bank-code.ts`
-- `references/vietnam-qr-pay-javascript/src/constants/banks.ts`
-- `references/vietnam-qr-pay-javascript/src/constants/bank-apps.ts`
+- `references/source/constants/bank-key.ts`
+- `references/source/constants/bank-code.ts`
+- `references/source/constants/banks.ts`
+- `references/source/constants/bank-apps.ts`
 
 Do not edit those generated Ruby files directly. Update the source sync script and regenerate instead.
 

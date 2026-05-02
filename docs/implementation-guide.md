@@ -65,13 +65,13 @@ These are simple data containers. They intentionally do not contain business log
 
 - `lib/vietnam_qr_pay/catalog/*.rb`
 
-Generated from the upstream JavaScript reference. Do not edit by hand.
+Generated from the bundled source constants. Do not edit by hand.
 
 ### Generator
 
 - `script/generate_catalog.rb`
 
-Transforms the upstream TypeScript constants into Ruby constants and structs.
+Transforms the bundled source constants into Ruby constants and structs.
 
 ### Tests
 

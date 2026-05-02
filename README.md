@@ -2,7 +2,7 @@
 
 `VietnamQrPay` is a dependency-free Ruby implementation of Vietnamese payment QR standards.
 
-It ports the core behavior of the original [`xuannghia/vietnam-qr-pay`](https://github.com/xuannghia/vietnam-qr-pay) JavaScript library and provides a Ruby-idiomatic API for:
+It provides a Ruby-idiomatic API for:
 
 - Encoding VietQR payloads
 - Encoding VNPayQR payloads
@@ -15,7 +15,7 @@ It ports the core behavior of the original [`xuannghia/vietnam-qr-pay`](https://
 - No runtime dependencies
 - Pure Ruby CRC16-CCITT implementation
 - Ruby-style module and method naming
-- Public bank constants ported from the JavaScript reference
+- Public bank constants bundled with the gem
 - Test coverage based on the upstream fixtures and expected payloads
 - Ready-to-publish gem metadata for RubyGems
 
@@ -129,7 +129,7 @@ qr = VietnamQrPay::QRPay.init_viet_qr(
 
 ### MoMo and ZaloPay receive QR
 
-The JavaScript reference treats these as VietQR payloads routed through BVBank. This gem keeps the same model.
+These payloads are modeled as VietQR transfers routed through BVBank. This gem keeps that model.
 
 MoMo example:
 
@@ -251,7 +251,7 @@ test/
   *_test.rb
 ```
 
-`script/generate_catalog.rb` is intentionally kept in the repository so you can re-sync the bank catalog from the upstream JavaScript reference later without hand-editing large constant files.
+`script/generate_catalog.rb` is intentionally kept in the repository so you can re-sync the bank catalog later without hand-editing large constant files.
 
 ## Development
 
@@ -267,13 +267,13 @@ Build the gem:
 bundle exec rake build
 ```
 
-Refresh the bank catalog from the bundled JavaScript reference:
+Refresh the bank catalog from the bundled source constants:
 
 ```bash
 ruby script/generate_catalog.rb
 ```
 
-The generator expects the upstream JavaScript source to be available at `references/vietnam-qr-pay-javascript`.
+The generator expects the source constants to be available at `references/source/constants`.
 
 For deeper implementation notes and release workflow, see the files under [`docs/`](docs).
 
@@ -293,14 +293,13 @@ If you use the repository `Makefile`, `make publish` computes the gem filename a
 
 ## Compatibility Notes
 
-- This gem follows the bundled JavaScript reference for payload structure and expected examples.
+- This gem follows the bundled source constants and verified payload examples in this repository.
 - The Ruby API is intentionally snake_case instead of camelCase.
 - Builder instances created with `init_viet_qr` and `init_vnpay_qr` start in a valid state, which is more natural for Ruby than marking empty objects invalid.
 - `set_evmco_field` writes to the EVMCo field set directly.
 
 ## Credits
 
-- Original JavaScript library: `xuannghia/vietnam-qr-pay`
 - Ruby port and packaging: this repository
 
 ## License

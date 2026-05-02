@@ -39,7 +39,7 @@ module VietnamQrPay
       normalize_bank_value(key).to_sym
     end
 
-    # The upstream JavaScript data uses lower-case string keys for banks.
+    # The bundled source data uses lower-case string keys for banks.
     def normalize_bank_value(key)
       key.to_s.downcase
     end

@@ -2,9 +2,6 @@
 
 module VietnamQrPay
   # Table-based CRC16-CCITT implementation used by EMVCo QR payloads.
-  #
-  # The lookup table is ported from the upstream JavaScript reference, which in
-  # turn follows the standard CRC16-CCITT polynomial used for QR payment CRCs.
   module CRC16
     TABLE = [
       0x0000, 0x1021, 0x2042, 0x3063, 0x4084, 0x50A5, 0x60C6, 0x70E7, 0x8108, 0x9129, 0xA14A, 0xB16B,
